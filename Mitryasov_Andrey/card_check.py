@@ -1,4 +1,4 @@
-# валидация номера карты (пишу по приколу потомучто нечего делать)
+# Валидация номера карты
 
 def validate_card(number: str)->bool:
 
@@ -9,12 +9,13 @@ def validate_card(number: str)->bool:
 
     return True
 
-# проверка луна
+# Проверка по алгоритму Луна
     
-def luhns_check(number):
+def luhns_check(number: str)->bool:
 
     if not validate_card(number):
         print("Ошибка: карта не прошла проверку. Убедитесь, что ввели корректный номер.")
+        return False
 
     every_first_number = card_number[::2]
     every_second_number = card_number[1::2]
@@ -43,16 +44,24 @@ def luhns_check(number):
 
     if result % 10 > 0:
 
-        print("Карта НЕ валидная!")
-
+        return False
+    
     else:
         
-        print("Карта ВАЛИДНАЯ!")
+        return True
 
-# вызов функции
+# Вызов функции
 
 card_number = input("Введите номер карты: ")
 
-luhns_check(card_number)
+# Функция возвращает True, если карта валидная, и False, если нет. Выводим результат.
 
+result = luhns_check(card_number)
+
+if result:
+    print("Карта ВАЛИДНАЯ!")
+    input("Нажмите Enter для выхода...")
+else:
+    print("Карта НЕВАЛИДНАЯ!")
+    input("Нажмите Enter для выхода...")
     
