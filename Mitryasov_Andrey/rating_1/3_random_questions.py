@@ -9,7 +9,7 @@ with open(questions_directory, "r", encoding="UTF-8") as file:
     all_questions = questions_json["questions"]
     max_questions = len(all_questions)
     
-    modifier_chance = 1
+    modifier_chance = 0.1 #  10%
     modifiers = ["Замена вопроса", 
                  "Подсказка x1", 
                  "Отказаться от 1 вопроса", 
