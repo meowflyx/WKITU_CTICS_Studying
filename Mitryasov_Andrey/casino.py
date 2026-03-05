@@ -18,7 +18,7 @@ def modify_balance(balance: int, amount: int, operation: str = "+") -> int:
 
 
 def interface(balance: int, 
-              message: str = "Введите ставку, 'm' для изменения баланса или 'q' для выхода: ") -> str:
+              message: str = "Введите ставку или 'q' для выхода: ") -> str:
     print("="*30)
     show_balance(balance)
 
