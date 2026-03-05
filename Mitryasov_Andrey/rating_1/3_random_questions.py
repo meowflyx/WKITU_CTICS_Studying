@@ -1,10 +1,10 @@
 import random
 import json
 
-#  меняй!
-questions_directory = "Mitryasov_Andrey\\rating_1\\questions.json"
+#  ЗАМЕНИТЬ ПРИ ИСПОЛЬЗОВАНИИ
+QUESTIONS_DIRECTORY = "Mitryasov_Andrey\\rating_1\\questions.json"
 
-with open(questions_directory, "r", encoding="UTF-8") as file:
+with open(QUESTIONS_DIRECTORY, "r", encoding="UTF-8") as file:
     questions_json = json.load(file)
     all_questions = questions_json["questions"]
     max_questions = len(all_questions)
